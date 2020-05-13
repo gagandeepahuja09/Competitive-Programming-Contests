@@ -55,6 +55,7 @@ int lcaLen(int a, int b) {
     return len + 2;
 }
 
+
 signed main() {
     int t = 1;
     // cin >> t;
