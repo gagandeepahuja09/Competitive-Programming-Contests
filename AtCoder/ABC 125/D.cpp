@@ -16,16 +16,16 @@ using namespace std;
 #define MOD 1000000007
 
 signed main() {
-    string s;
-    cin >> s;
-    int cnt = 0;
-    for(int i = 0; i < s.size(); i++) {
-        if(s[i] == '0' && i % 2 == 0) {
-            cnt++;
-        }
-        if(s[i] == '1' && i % 2 == 1) {
-            cnt++;
-        }
+    int n;
+    cin >> n;
+    vi a(n);
+    int sum = 0, cnt = 0, mn = INT_MAX;
+    for(int i = 0; i < n; i++) {
+        cin >> a[i];
+        sum += abs(a[i]);
+        if(a[i] < 0)    cnt++;
+        mn = min(mn, abs(a[i]));
     }
-    cout << min(cnt, (int)s.size() - cnt) << endl;
+    if(cnt % 2) sum -= (2 * mn);
+    cout << sum << endl;
 }
