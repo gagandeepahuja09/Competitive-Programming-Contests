@@ -38,6 +38,7 @@ signed main() {
         sort(x.begin(), x.end()); sort(y.begin(), y.end()); sort(both.begin(), both.end());
         int ans = 1e18;
         vi xsum, ysum; int sum = 0;
+        
         xsum.pb(0); ysum.pb(0);
         for(int i = 0; i < x.size(); i++) {
             sum += x[i];
